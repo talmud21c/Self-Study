@@ -1,0 +1,2 @@
+﻿  19_04_01.c
+C:\Do it Ex\Do it 19_파일 입출력\19_04_01\19_04_01.c(5,17): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
