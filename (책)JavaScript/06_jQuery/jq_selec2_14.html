@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>콘텐츠 탐색 선택자 - find()/filter()</title>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<div id="outer_wrap">
+    <h1>콘텐츠 탐색 선택자</h1>
+    <section id="inner_1">
+        <h2>find(), filter()</h2>
+        <p class="txt1">내용1</p>
+        <p class="txt2">내용2</p>
+    </section>
+    <section id="inner_2">
+        <h2>filter(function)</h2>
+        <p>index0</p>
+        <p>index1</p>
+        <p>index2</p>
+        <p>index3</p>
+    </section>
+</div>
+</body>
+<script>
+    $(function(){
+        $("#inner_1").find(".txt1")             // id 값이 "inner_1"인 요소의 하위 요소 중 class ".txt1"인 요소를 선택
+        .css({"background-color":"#ff0"});
+
+        $("#inner_1 p").filter(".txt2")         // id 값이 "inner_1"인 요소의 하위 요소 중 class ".txt2"인 요소를 선택
+        .css({"background-color":"#0ff"});
+
+        $("#inner_2 p").filter(function(idx, obj){  // id 값이 "inner_2"이며 하위 요소인 <p>의 개수만큼 익명 함수가 실행
+            console.log(idx);
+            return idx % 2 == 0;
+        })
+        .css({"background-color":"#0ff"});
+    });
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>전역 변수, 지역변수</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 개발자 A
+    var num = 100;
+    function menu() {
+        num += 100;
+        alert(num);
+    }
+    menu();
+
+    //개발자 B
+    function menu() {
+        alert(num);
+    }
+    // result = 100;
+    //개발자 A는 200이 뜰 것을 예상했으나 개발자 B에 의해 개발자 A가 만든 함수가 제거되고 B가 만든 함수만 호출된 것.
+</script>
+</html>

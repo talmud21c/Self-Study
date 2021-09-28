@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>재귀함수 호출</title>
+</head>
+<body>
+
+</body>
+<script>
+    var num = 0;
+    function testFnc() {
+        num++;
+        document.write(num, "<br>");
+        if(num == 10) return;
+
+        testFnc();
+    }
+
+    testFnc();
+</script>
+</html>

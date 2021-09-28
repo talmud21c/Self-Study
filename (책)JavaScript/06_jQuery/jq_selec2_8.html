@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배열 관련 메서드-map()/grep()메서드</title>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    $(function() {
+        var arr1 = [{
+            "area" : "서울",
+            "name" : "이 연"
+        },{
+            "area" : "부산",
+            "name" : "박재석"
+        },{
+            "area" : "대전",
+            "name" : "구본근"
+        },{
+            "area" : "서울",
+            "name" : "박성호"
+        }]
+
+        var arr2 = $.map(arr1, function(a, b){
+            if(a.area == "서울"){
+                return a;
+            }
+        });
+
+        console.log(arr2);
+        console.log("=====first End=====");
+
+        var arr3 = $.grep(arr1, function(a, b){
+            if(a.area == "서울"){
+                return true;
+            } else {
+                return false;
+            }
+        });
+        console.log(arr3);
+        console.log("=====second End=====");
+    });
+</script>
+</html>

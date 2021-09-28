@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>함수 호이스팅</title>
+</head>
+<body>
+
+</body>
+<script>
+    // count=0으로 초기화.
+    var count = 0;
+
+    // 함수 호이스팅
+    myFnc();
+
+    function myFnc() {
+        count++;
+        document.write("hello" + count, "<br/>");
+    }
+
+    myFnc();
+
+    //익명 함수 선언 참조 방식은 호이스팅을 지원하지 않음
+    var theFnc = function() {
+        count++;
+        document.write("bye" + count, "<br/>");
+    }
+
+    theFnc();
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>window객체</title>
+</head>
+<body>
+<h1>일정 시간 간격으로 값 증가시키기</h1>
+콘솔 패널을 열어 확인하세요<br/>
+<button onclick="clearInterval(auto_1)">증가정지</button>
+<button onclick="clearInterval(auto_2)">감소정지</button>
+</body>
+<script>
+    var addNum = 0;
+    var subNum = 1000;
+
+    var auto_1 = setInterval(function() {
+        addNum++;
+        console.log("addNum:" + addNum);
+    },3000);
+
+    var auto_2 = setInterval(function() {
+        subNum--;
+        console.log("sumNum:" + subNum);
+    }, 3000);
+</script>
+</html>

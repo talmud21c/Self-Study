@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배열 관련 메서드 - $.inArray()/$.isArray()/$.merge()</title>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    $(function(){
+        var arr1 = ["서울", "대전", "부산", "전주"];
+        var arr2 = ["한국", "미국", "일본", "중국"];
+        var obj = {
+            "name" : "박재석",
+            "area" : "서울"
+        }
+
+        var idxNum = $.inArray("부산", arr1);   // arr1 배열에 저장된 데이터 중 "부산"의 인덱스 값 반환
+        console.log(idxNum);
+
+        var okArray1 = $.isArray(arr1);
+        var okArray2 = $.isArray(obj);
+        console.log(okArray1);  // 배열 객체면 true
+        console.log(okArray2);  // 배열 객체가 아니면 false
+
+        $.merge(arr2, arr1);    // 두 배열 객체를 하나의 배열 객체로 묶음
+        console.log(arr2);  // ["한국", "미국", "일본", "중국", "서울", "대전", "부산", "전주"]
+    });
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>지역변수 전역변수</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 즉시 실행함수를 사용함으로써 충돌을 피함.
+    (function() {
+        var num = 100;
+        function menu() {
+            num += 100;
+            alert(num);
+        }
+        menu();
+    }());
+
+    (function() {
+        var num = 100;
+        function menu() {
+            alert(num);
+        }
+    }());
+</script>
+</html>

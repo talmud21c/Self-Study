@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>종속 선택자</title>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+    <h1 class="tit">제이쿼리</h1>
+    <h2>선택자</h2>
+    <h3 class="tit">직접 선택자</h3>
+</body>
+    <script>
+        // 종속 선택자는 요소명과 class값이 일치하는 요소만 적용
+        $(function(){
+            $("h1.tit").css("background-color","powderblue")
+            .css("border", "2px dashed red");
+        });
+    </script>
+</html>
