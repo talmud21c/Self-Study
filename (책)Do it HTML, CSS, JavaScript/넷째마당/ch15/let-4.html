@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>재선언할 수 없는 let 변수</title>
+<script>
+    function calcSum(n) {
+        let sum =0;
+        for (let i = 1; i < n; i++) {sum += i;}
+        let sum;    // sum변수 재선언
+        console.log(sum);
+    }
+    calcSum(10);
+</script>
+</head>
+<body>
+
+</body>
+</html>
